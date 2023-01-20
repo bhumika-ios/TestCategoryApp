@@ -12,6 +12,10 @@
 		AC2324A8297AA0BC0027F978 /* PublishTodoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */; };
 		AC2324AA297AA0D10027F978 /* ToDoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A9297AA0D10027F978 /* ToDoListData.swift */; };
 		AC2324AC297AA1470027F978 /* ToDoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324AB297AA1470027F978 /* ToDoScreen.swift */; };
+		AC2324AF297AA2870027F978 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324AE297AA2870027F978 /* Group.swift */; };
+		AC2324B1297AA2930027F978 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324B0297AA2930027F978 /* Color.swift */; };
+		AC2324B3297AA29D0027F978 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324B2297AA29D0027F978 /* Todo.swift */; };
+		AC2324B5297AA2B20027F978 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324B4297AA2B20027F978 /* PersistenceController.swift */; };
 		AC956081297909CF0071EC35 /* TestCategoryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */; };
 		AC956083297909CF0071EC35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956082297909CF0071EC35 /* ContentView.swift */; };
 		AC956085297909D00071EC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC956084297909D00071EC35 /* Assets.xcassets */; };
@@ -48,6 +52,10 @@
 		AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishTodoScreen.swift; sourceTree = "<group>"; };
 		AC2324A9297AA0D10027F978 /* ToDoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListData.swift; sourceTree = "<group>"; };
 		AC2324AB297AA1470027F978 /* ToDoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoScreen.swift; sourceTree = "<group>"; };
+		AC2324AE297AA2870027F978 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		AC2324B0297AA2930027F978 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		AC2324B2297AA29D0027F978 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		AC2324B4297AA2B20027F978 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		AC95607D297909CF0071EC35 /* TestCategoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCategoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoryAppApp.swift; sourceTree = "<group>"; };
 		AC956082297909CF0071EC35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +100,8 @@
 		AC23249F297AA0310027F978 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC956089297909D00071EC35 /* Persistence.swift */,
+				AC95608B297909D00071EC35 /* TestCategoryApp.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +116,10 @@
 		AC2324A1297AA0450027F978 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
+				AC2324AE297AA2870027F978 /* Group.swift */,
+				AC2324B0297AA2930027F978 /* Color.swift */,
+				AC2324B2297AA29D0027F978 /* Todo.swift */,
+				AC2324B4297AA2B20027F978 /* PersistenceController.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -154,8 +168,6 @@
 				AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */,
 				AC956082297909CF0071EC35 /* ContentView.swift */,
 				AC956084297909D00071EC35 /* Assets.xcassets */,
-				AC956089297909D00071EC35 /* Persistence.swift */,
-				AC95608B297909D00071EC35 /* TestCategoryApp.xcdatamodeld */,
 				AC956086297909D00071EC35 /* Preview Content */,
 			);
 			path = TestCategoryApp;
@@ -319,9 +331,13 @@
 				AC95608A297909D00071EC35 /* Persistence.swift in Sources */,
 				AC2324AA297AA0D10027F978 /* ToDoListData.swift in Sources */,
 				AC956083297909CF0071EC35 /* ContentView.swift in Sources */,
+				AC2324AF297AA2870027F978 /* Group.swift in Sources */,
+				AC2324B1297AA2930027F978 /* Color.swift in Sources */,
 				AC2324A4297AA0830027F978 /* HomeScreen.swift in Sources */,
 				AC9560F52979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift in Sources */,
+				AC2324B3297AA29D0027F978 /* Todo.swift in Sources */,
 				AC9560F42979217B0071EC35 /* CatgoryItem+CoreDataClass.swift in Sources */,
+				AC2324B5297AA2B20027F978 /* PersistenceController.swift in Sources */,
 				AC956081297909CF0071EC35 /* TestCategoryAppApp.swift in Sources */,
 				AC2324AC297AA1470027F978 /* ToDoScreen.swift in Sources */,
 				AC2324A8297AA0BC0027F978 /* PublishTodoScreen.swift in Sources */,
