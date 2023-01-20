@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2324A4297AA0830027F978 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A3297AA0830027F978 /* HomeScreen.swift */; };
+		AC2324A6297AA0AB0027F978 /* PublishGroupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A5297AA0AB0027F978 /* PublishGroupScreen.swift */; };
+		AC2324A8297AA0BC0027F978 /* PublishTodoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */; };
+		AC2324AA297AA0D10027F978 /* ToDoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A9297AA0D10027F978 /* ToDoListData.swift */; };
 		AC956081297909CF0071EC35 /* TestCategoryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */; };
 		AC956083297909CF0071EC35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956082297909CF0071EC35 /* ContentView.swift */; };
 		AC956085297909D00071EC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC956084297909D00071EC35 /* Assets.xcassets */; };
@@ -16,6 +20,8 @@
 		AC956097297909D00071EC35 /* TestCategoryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956096297909D00071EC35 /* TestCategoryAppTests.swift */; };
 		AC9560A1297909D00071EC35 /* TestCategoryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9560A0297909D00071EC35 /* TestCategoryAppUITests.swift */; };
 		AC9560A3297909D00071EC35 /* TestCategoryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9560A2297909D00071EC35 /* TestCategoryAppUITestsLaunchTests.swift */; };
+		AC9560F42979217B0071EC35 /* CatgoryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9560F22979217B0071EC35 /* CatgoryItem+CoreDataClass.swift */; };
+		AC9560F52979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9560F32979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC2324A3297AA0830027F978 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		AC2324A5297AA0AB0027F978 /* PublishGroupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishGroupScreen.swift; sourceTree = "<group>"; };
+		AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishTodoScreen.swift; sourceTree = "<group>"; };
+		AC2324A9297AA0D10027F978 /* ToDoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListData.swift; sourceTree = "<group>"; };
 		AC95607D297909CF0071EC35 /* TestCategoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCategoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoryAppApp.swift; sourceTree = "<group>"; };
 		AC956082297909CF0071EC35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +58,8 @@
 		AC95609C297909D00071EC35 /* TestCategoryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCategoryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9560A0297909D00071EC35 /* TestCategoryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoryAppUITests.swift; sourceTree = "<group>"; };
 		AC9560A2297909D00071EC35 /* TestCategoryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC9560F22979217B0071EC35 /* CatgoryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatgoryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC9560F32979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatgoryItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC23249F297AA0310027F978 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC2324A0297AA03A0027F978 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC2324A1297AA0450027F978 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		AC2324A2297AA06E0027F978 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AC2324A3297AA0830027F978 /* HomeScreen.swift */,
+				AC2324A5297AA0AB0027F978 /* PublishGroupScreen.swift */,
+				AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */,
+				AC2324A9297AA0D10027F978 /* ToDoListData.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		AC956074297909CF0071EC35 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +142,12 @@
 		AC95607F297909CF0071EC35 /* TestCategoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC2324A2297AA06E0027F978 /* Screen */,
+				AC2324A1297AA0450027F978 /* ModelView */,
+				AC2324A0297AA03A0027F978 /* View */,
+				AC23249F297AA0310027F978 /* Model */,
+				AC9560F22979217B0071EC35 /* CatgoryItem+CoreDataClass.swift */,
+				AC9560F32979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift */,
 				AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */,
 				AC956082297909CF0071EC35 /* ContentView.swift */,
 				AC956084297909D00071EC35 /* Assets.xcassets */,
@@ -264,9 +314,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC95608A297909D00071EC35 /* Persistence.swift in Sources */,
+				AC2324AA297AA0D10027F978 /* ToDoListData.swift in Sources */,
 				AC956083297909CF0071EC35 /* ContentView.swift in Sources */,
+				AC2324A4297AA0830027F978 /* HomeScreen.swift in Sources */,
+				AC9560F52979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift in Sources */,
+				AC9560F42979217B0071EC35 /* CatgoryItem+CoreDataClass.swift in Sources */,
 				AC956081297909CF0071EC35 /* TestCategoryAppApp.swift in Sources */,
+				AC2324A8297AA0BC0027F978 /* PublishTodoScreen.swift in Sources */,
 				AC95608D297909D00071EC35 /* TestCategoryApp.xcdatamodeld in Sources */,
+				AC2324A6297AA0AB0027F978 /* PublishGroupScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
