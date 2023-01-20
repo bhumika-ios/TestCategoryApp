@@ -11,6 +11,7 @@
 		AC2324A6297AA0AB0027F978 /* PublishGroupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A5297AA0AB0027F978 /* PublishGroupScreen.swift */; };
 		AC2324A8297AA0BC0027F978 /* PublishTodoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */; };
 		AC2324AA297AA0D10027F978 /* ToDoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324A9297AA0D10027F978 /* ToDoListData.swift */; };
+		AC2324AC297AA1470027F978 /* ToDoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2324AB297AA1470027F978 /* ToDoScreen.swift */; };
 		AC956081297909CF0071EC35 /* TestCategoryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */; };
 		AC956083297909CF0071EC35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC956082297909CF0071EC35 /* ContentView.swift */; };
 		AC956085297909D00071EC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC956084297909D00071EC35 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		AC2324A5297AA0AB0027F978 /* PublishGroupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishGroupScreen.swift; sourceTree = "<group>"; };
 		AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishTodoScreen.swift; sourceTree = "<group>"; };
 		AC2324A9297AA0D10027F978 /* ToDoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListData.swift; sourceTree = "<group>"; };
+		AC2324AB297AA1470027F978 /* ToDoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoScreen.swift; sourceTree = "<group>"; };
 		AC95607D297909CF0071EC35 /* TestCategoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCategoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC956080297909CF0071EC35 /* TestCategoryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCategoryAppApp.swift; sourceTree = "<group>"; };
 		AC956082297909CF0071EC35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				AC2324A5297AA0AB0027F978 /* PublishGroupScreen.swift */,
 				AC2324A7297AA0BC0027F978 /* PublishTodoScreen.swift */,
 				AC2324A9297AA0D10027F978 /* ToDoListData.swift */,
+				AC2324AB297AA1470027F978 /* ToDoScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				AC9560F52979217B0071EC35 /* CatgoryItem+CoreDataProperties.swift in Sources */,
 				AC9560F42979217B0071EC35 /* CatgoryItem+CoreDataClass.swift in Sources */,
 				AC956081297909CF0071EC35 /* TestCategoryAppApp.swift in Sources */,
+				AC2324AC297AA1470027F978 /* ToDoScreen.swift in Sources */,
 				AC2324A8297AA0BC0027F978 /* PublishTodoScreen.swift in Sources */,
 				AC95608D297909D00071EC35 /* TestCategoryApp.xcdatamodeld in Sources */,
 				AC2324A6297AA0AB0027F978 /* PublishGroupScreen.swift in Sources */,
