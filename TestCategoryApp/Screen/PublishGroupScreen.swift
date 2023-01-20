@@ -121,6 +121,7 @@ struct PublishGroupScreen: View {
                     Button (action: publishGroup) {
                         Text("Done")
                     }
+                    .disabled(title == "")
                 }
             }
             .navigationTitle("Publish Group")

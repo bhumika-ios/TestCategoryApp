@@ -29,6 +29,7 @@ struct ToDoScreen: View {
             ScrollView {
                 VStack (spacing: 10) {
                     //LazyVGrid(columns: groupCardColumns, spacing: 10) {
+                    VStack{
                         ForEach(groups) {group in
                             NavigationLink(destination: {
                                 List(group.itemsArray){todo in
@@ -49,8 +50,8 @@ struct ToDoScreen: View {
                             })
                             
                         }
-                  //  }
-                    
+                        //  }
+                    }
                     SectionTitleView(title: "")
                     
                     TodoList(query: searchValue, group: filteredByGroup)
@@ -61,14 +62,14 @@ struct ToDoScreen: View {
             //.searchable(text: $searchValue, placement: .toolbar)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-//                ToolbarItem (placement: .navigationBarTrailing) {
-//                    Button(action: { isAddGroupOpen = true }) {
-//                        Image(systemName: "plus.rectangle.on.folder")
-//                            .sheet (isPresented: $isAddGroupOpen) {
-//                                PublishGroupScreen()
-//                            }
-//                    }
-//                }
+                ToolbarItem (placement: .navigationBarTrailing) {
+                    Button(action: { isAddGroupOpen = true }) {
+                        Image(systemName: "plus.rectangle.on.folder")
+                            .sheet (isPresented: $isAddGroupOpen) {
+                                PublishGroupScreen()
+                            }
+                    }
+                }
                 ToolbarItem (placement: .primaryAction) {
                     Button(action: { isAddTodoOpen = true }) {
                         Image(systemName: "plus.circle")
@@ -78,6 +79,7 @@ struct ToDoScreen: View {
                     }
                 }
             }
+            .navigationTitle("Todo List")
             .navigationViewStyle(.automatic)
         }
     }

@@ -89,7 +89,9 @@ struct PublishTodoScreen: View {
                     Button (action: publishTodo) {
                         Text("Done")
                     }
+                    .disabled(title == "")
                 }
+               
             }
             .navigationTitle("Publish Todo")
             .navigationBarTitleDisplayMode(.inline)

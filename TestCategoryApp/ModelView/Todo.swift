@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+// import SwiftUI
 
 extension Todo {
     static func createFakeTodo(group: Group, context: NSManagedObjectContext? = nil) -> Todo {
