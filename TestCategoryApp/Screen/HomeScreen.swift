@@ -6,10 +6,27 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct HomeScreen: View {
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TodoTabScreen()
+//        TabView {
+//            ProductList()
+//                .tabItem {
+//                    Image(systemName: "list.dash")
+//                }
+//            PublishGroupScreen()
+//                .tabItem {
+//                    Image(systemName: "plus.rectangle.on.folder")
+//                }
+//            TodoTabScreen()
+//                .tabItem {
+//                    Image(systemName: "chart.bar")
+//                }
+//        }
     }
 }
 
