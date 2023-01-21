@@ -119,8 +119,8 @@
 			children = (
 				AC2324B6297AA3950027F978 /* CategoryCardView.swift */,
 				AC2324B8297AA3AC0027F978 /* ListItemView.swift */,
-				AC2324BA297AA3BF0027F978 /* CheckBoxView.swift */,
 				AC2324BC297AA3D00027F978 /* SectionTitleView.swift */,
+				AC2324BA297AA3BF0027F978 /* CheckBoxView.swift */,
 				AC2324BE297AA3DE0027F978 /* CategoryIconView.swift */,
 				AC2324C0297AA3EB0027F978 /* ProductList.swift */,
 			);
