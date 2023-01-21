@@ -9,16 +9,16 @@ import Foundation
 import CoreData
 // import SwiftUI
 
-extension Todo {
-    static func createFakeTodo(group: Group, context: NSManagedObjectContext? = nil) -> Todo {
-        let newTodo = context != nil ? Todo(context: context!) : Todo()
-        newTodo.group = group
-        newTodo.id = UUID()
-        newTodo.title = "Some Todo"
-        newTodo.createdAt = Date()
-        newTodo.doDate = Date()
+extension Product {
+    static func createFakeTodo(category: Category, context: NSManagedObjectContext? = nil) -> Product {
+        let newProduct = context != nil ? Product(context: context!) : Product()
+        newProduct.category = category
+        newProduct.id = UUID()
+        newProduct.title = "Some Todo"
+      //  newTodo.createdAt = Date()
+        newProduct.doDate = Date()
         
-        return newTodo
+        return newProduct
     }
     
     var readableDoDate: String {
