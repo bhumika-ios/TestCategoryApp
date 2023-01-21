@@ -9,25 +9,25 @@ import CoreData
 import SwiftUI
 
 extension PersistenceController {
-    func createGroup(context: NSManagedObjectContext, title: String, symbolIcon: String, color: Color) {
-        let group = Group(context: context)
-        group.id = UUID()
-        group.title = title
-        group.color = color.toHex()
-        group.systemIcon = symbolIcon
+    func createCategory(context: NSManagedObjectContext, title: String, symbolIcon: String, color: Color) {
+        let category = Category(context: context)
+        category.id = UUID()
+        category.title = title
+        category.color = color.toHex()
+        category.systemIcon = symbolIcon
 
         self.save(context: context)
     }
 }
 
 extension PersistenceController {
-    func createTodo(context: NSManagedObjectContext, group: Group, title: String, doDate: Date) {
-        let newTodo = Todo(context: context)
-        newTodo.group = group
-        newTodo.id = UUID()
-        newTodo.title = title
-        newTodo.createdAt = Date()
-        newTodo.doDate = doDate
+    func createProduct(context: NSManagedObjectContext, category: Category, title: String, doDate: Date) {
+        let newProduct = Product(context: context)
+        newProduct.category = category
+        newProduct.id = UUID()
+        newProduct.title = title
+      //  newTodo.createdAt = Date()
+        newProduct.doDate = doDate
         
         self.save(context: context)
     }
