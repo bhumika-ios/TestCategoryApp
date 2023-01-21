@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct PublishGroupScreen: View {
+struct PublishCategoryScreen: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var moc
+    @Environment(\.self) var env
     
-    var group: Group? = nil
+    var category: Category? = nil
     
     @State private var title = ""
     @State private var color = Color.indigo
@@ -29,27 +30,27 @@ struct PublishGroupScreen: View {
     
     private let columns = Array(repeating: GridItem(spacing: 20), count: 5)
     
-    private func publishGroup() {
-        if group != nil {
-            group?.title = title
-            group?.systemIcon = systemIcon
-            group?.color = color.toHex()
+    private func publishCategory() {
+        if category != nil {
+            category?.title = title
+            category?.systemIcon = systemIcon
+            category?.color = color.toHex()
             
             PersistenceController.shared.save(context: moc)
         } else {
-            PersistenceController.shared.createGroup(context: moc, title: title, symbolIcon: systemIcon, color: color)
+            PersistenceController.shared.createCategory(context: moc, title: title, symbolIcon: systemIcon, color: color)
         }
         
         dismiss()
     }
     
-    init(group: Group? = nil) {
-        if let safeGroup = group {
-            self.group = safeGroup
+    init(category: Category? = nil) {
+        if let safeCategory = category {
+            self.category = safeCategory
             
-            self._title = .init(initialValue: safeGroup.title!)
-            self._color = .init(initialValue: Color(hex: safeGroup.color!)!)
-            self._systemIcon = .init(initialValue: safeGroup.systemIcon!)
+            self._title = .init(initialValue: safeCategory.title!)
+            self._color = .init(initialValue: Color(hex: safeCategory.color!)!)
+            self._systemIcon = .init(initialValue: safeCategory.systemIcon!)
         }
     }
     
@@ -58,7 +59,7 @@ struct PublishGroupScreen: View {
             ScrollView {
                 VStack (spacing: 20) {
                     VStack (alignment: .center, spacing: 20) {
-                        GroupIconView(systemIcon: systemIcon, color: color, size: .lg)
+                        CategoryIconView(systemIcon: systemIcon, color: color, size: .lg)
                         TextField("Title", text: $title)
                             .padding(10)
                             .background(Color(UIColor.systemGray6))
@@ -96,7 +97,7 @@ struct PublishGroupScreen: View {
                     
                     LazyVGrid (columns: columns, spacing: 20) {
                         ForEach(systemIcons, id: \.self) { icon in
-                            GroupIconView(systemIcon: icon, color: self.systemIcon == icon ? self.color : Color(UIColor.systemGray3))
+                            CategoryIconView(systemIcon: icon, color: self.systemIcon == icon ? self.color : Color(UIColor.systemGray3))
                                 .onTapGesture {
                                     withAnimation {
                                         self.systemIcon = icon
@@ -118,20 +119,40 @@ struct PublishGroupScreen: View {
                 }
                 
                 ToolbarItem (placement: .primaryAction) {
-                    Button (action: publishGroup) {
+                    Button (action: publishCategory) {
                         Text("Done")
                     }
                     .disabled(title == "")
                 }
             }
-            .navigationTitle("Publish Group")
+            .navigationTitle("Category")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+               // .overlay(alignment: .trailing){
+                    Button{
+                        if let editCategory =  category {
+                            env.managedObjectContext.delete(editCategory)
+                            try? env.managedObjectContext.save()
+                            env.dismiss()
+                        }
+                        
+                        
+                    }label: {
+                        Image(systemName: "trash")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .font(.title3)
+                            .foregroundColor(.red)
+                    }
+                  //  .opacity(taskModel.editTask == nil ? 0 : 1)
+               // }
+            }
         }
     }
 }
 
 struct PublishGroupScreen_Previews: PreviewProvider {
     static var previews: some View {
-        PublishGroupScreen()
+        PublishCategoryScreen()
     }
 }

@@ -11,12 +11,12 @@ import CoreData
 struct ListItemView: View {
     @Environment(\.managedObjectContext) private var moc
     
-    @ObservedObject var todo: Todo
+    @ObservedObject var product: Product
     
     @State private var doesClose = false
-    @State private var isEditTodoOpen = false
+    @State private var isEditProductOpen = false
     
-    private func deleteTodo(object: NSManagedObject) {
+    private func deleteProduct(object: NSManagedObject) {
         PersistenceController.shared.delete(context: moc, object: object)
     }
     
@@ -25,22 +25,23 @@ struct ListItemView: View {
             HStack {
                 VStack (alignment: .leading, spacing: 5) {
                     HStack {
-                        CheckboxView(defaultChecked: todo.done, onToggle: {
-                            todo.toggle(context: moc)
-                        })
-                        if todo.title != nil {
-                            Text(todo.title!)
+//                        CheckboxView(defaultChecked: todo.done, onToggle: {
+//                            todo.toggle(context: moc)
+//                        })
+                        if product.title != nil {
+                            Text(product.title!)
                                 .onTapGesture {
-                                    isEditTodoOpen.toggle()
+                                    isEditProductOpen.toggle()
                                 }
-                                .sheet(isPresented: $isEditTodoOpen) {
-                                    PublishTodoScreen(todo: todo)
+                                .sheet(isPresented: $isEditProductOpen) {
+                                    PublishProductScreen(product: product)
                                 }
                         }
                     }
                     
-                    if todo.group != nil {
-                        Text("\(todo.group!.title!) | \(todo.readableDoDate)")
+                    if product.category != nil {
+                        //| \(todo.readableDoDate)
+                        Text("\(product.category!.title!) ")
                             .foregroundColor(Color.gray)
                             .font(.system(size: 14))
                     }
@@ -48,21 +49,21 @@ struct ListItemView: View {
                 
                 Spacer()
                 
-                Image(systemName: "trash")
-                    .onTapGesture {
-                        deleteTodo(object: todo)
-                    }
+//                Image(systemName: "trash")
+//                    .onTapGesture {
+//                        deleteProduct(object: product)
+//                    }
             }
             Divider()
         }
     }
 }
 
-let todo = Todo.createFakeTodo(group: Group())
+let product = Product.createFakeTodo(category: Category())
 
 struct ListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemView(todo: todo)
+        ListItemView(product: product)
             .previewLayout(.sizeThatFits)
     }
 }

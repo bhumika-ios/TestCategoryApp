@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct ToDoListData: View {
+struct ProductListData: View {
     @State private var searchValue = ""
-    @State private var filteredByGroup: Group? = nil
-    @State private var isAddGroupOpen = false
-    @State private var isAddTodoOpen = false
+    @State private var filteredByCategory: Category? = nil
+    @State private var isAddCategoryOpen = false
+    @State private var isAddProductOpen = false
     var body: some View {
         NavigationView {
             ScrollView {
                 SectionTitleView(title: "")
                 
-                TodoList(query: searchValue, group: filteredByGroup)
+                ProductList(query: searchValue, category: filteredByCategory)
             }
         
         .padding(.leading)
@@ -26,10 +26,10 @@ struct ToDoListData: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem (placement: .primaryAction) {
-                Button(action: { isAddTodoOpen = true }) {
+                Button(action: { isAddProductOpen = true }) {
                     Image(systemName: "plus.circle")
-                        .sheet(isPresented: $isAddTodoOpen) {
-                            PublishTodoScreen()
+                        .sheet(isPresented: $isAddProductOpen) {
+                            PublishProductScreen()
                         }
                     }
                 }
@@ -40,6 +40,6 @@ struct ToDoListData: View {
 
 struct ToDoListData_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoListData()
+        ProductListData()
     }
 }
