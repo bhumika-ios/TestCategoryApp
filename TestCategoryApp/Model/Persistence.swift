@@ -11,17 +11,17 @@ struct PersistenceController {
     static let shared = PersistenceController()
 
     static var preview: PersistenceController = {
-        var groups: [Group] = []
+        var groups: [Category] = []
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<3 {
-            let newGroup = Group.createFakeGroup(context: viewContext)
+            let newGroup = Category.createFakeGroup(context: viewContext)
             
             groups.append(newGroup)
         }
         
         for _ in 0..<3 {
-            let newTodo = Todo.createFakeTodo(group: groups[Int.random(in: 0..<groups.count)], context: viewContext)
+            let newTodo = Product.createFakeTodo(category: groups[Int.random(in: 0..<groups.count)], context: viewContext)
         }
         
         result.save(context: viewContext)
